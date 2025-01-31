@@ -1,10 +1,10 @@
 # AI Regulations and Security
 
 # 1. API Key Security
-## Risk:
+### Risk:
 Exposing API keys in the codebase can lead to unauthorized access and potential abuse.
 
-## Countermeasure:
+### Countermeasure:
 
 We store API keys using environment variables instead of hardcoding them in the source code.
 Example: os.getenv("OPENAI_API_KEY") in agent.py
@@ -12,10 +12,10 @@ This prevents accidental exposure if the code is pushed to a public repository.
 API rate limits and restrictions should be set in the respective API provider dashboards.
 
 # 2. Data Leakage Prevention
-## Risk:
+### Risk:
 Sending the entire restaurant review dataset to the LLM could expose sensitive business information.
 
-## Countermeasure:
+### Countermeasure:
 
 We limit the data sent to the LLM by extracting only relevant chunks from restaurant_reviews.csv using sampling (df.sample(5)).
 This ensures that the LLM only processes a subset of the data instead of the full dataset.
@@ -25,7 +25,7 @@ If using a database in the future, we can implement query-based extraction rathe
 ## Risk:
 Malicious users could craft prompts that manipulate the AI into returning unintended or harmful responses.
 
-## Countermeasure:
+### Countermeasure:
 
 We strictly define the system prompt in agent.py to ensure the AI stays within its scope:
 
@@ -34,10 +34,10 @@ We log user queries (in utils.py) to track potential misuse and detect anomalies
 In the future, additional measures like regex filtering and predefined query formats can be implemented to sanitize user input.
 
 # 4. Secure External API Calls
-## Risk:
+### Risk:
 Unverified or incorrectly formatted API requests could cause service failures or unexpected behavior.
 
-## Countermeasure:
+### Countermeasure:
 
 We validate user inputs before sending them to external APIs (api_tools.py):
 
@@ -52,10 +52,10 @@ Exception handling ensures that failures in API calls do not crash the applicati
 Rate limiting & retries can be added to avoid API request flooding.
 
 # 5. Logging & Monitoring
-## Risk:
+### Risk:
 Undetected errors or attacks can cause prolonged downtime or data breaches.
 
-## Countermeasure:
+### Countermeasure:
 
 We implemented logging in utils.py, which tracks API interactions, errors, and user queries:
 
@@ -65,10 +65,10 @@ Logging helps detect suspicious activities, such as repeated failed API calls or
 Logs can be stored and analyzed for debugging and security audits.
 
 # 6. Streamlit Session Security
-## Risk:
+### Risk:
 Session-based attacks (e.g., Cross-Site Scripting) could manipulate UI elements.
 
-## Countermeasure:
+### Countermeasure:
 
 Session state is initialized properly (st.session_state), reducing unexpected session behavior.
 User inputs are not executed as code, preventing code injection vulnerabilities.
