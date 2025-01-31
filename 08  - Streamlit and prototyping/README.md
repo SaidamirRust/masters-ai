@@ -1,3 +1,5 @@
+# Please view in Code, not Preview.
+
 import streamlit as st
 from agent import query_agent
 from api_tools import get_restaurant_recommendations
