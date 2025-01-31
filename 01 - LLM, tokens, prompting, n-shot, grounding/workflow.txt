@@ -1,4 +1,4 @@
-# CharGPT
+# ChatGPT
 Me: I need you to generate an elaborate blogpost based on the contents of this transcript text file I'm providing.
 
 AI: Of course! Here is a blogpost derived from the contents of lesson-1-transcript.txt:
