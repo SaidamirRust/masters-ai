@@ -51,7 +51,7 @@ A thought-provoking discussion emerged around ethical AI, focusing on:
 - **Bias in AI:** Addressing algorithmic fairness to prevent discrimination.
 - **Corporate Responsibilities:** Best practices for ensuring AI aligns with human values.
 
- ![Lecture-image-1]([https://github.com/user-attachments/assets/e0ea38ff-be21-488e-9764-b940d7734953](https://github.com/SaidamirRust/masters-ai/blob/main/01%20-%20LLM%2C%20tokens%2C%20prompting%2C%20n-shot%2C%20grounding/DALL%C2%B7E%202025-02-04%2012.37.10%20-%20A%20futuristic%20illustration%20depicting%20AI%20and%20Machine%20Learning%20concepts.%20A%20digital%20brain%20representing%20artificial%20intelligence%20is%20connected%20to%20a%20network%20o.webp))
+ ![Lecture-image-2]([https://github.com/user-attachments/assets/e0ea38ff-be21-488e-9764-b940d7734953](https://github.com/SaidamirRust/masters-ai/blob/main/01%20-%20LLM%2C%20tokens%2C%20prompting%2C%20n-shot%2C%20grounding/DALL%C2%B7E%202025-02-04%2012.37.10%20-%20A%20futuristic%20illustration%20depicting%20AI%20and%20Machine%20Learning%20concepts.%20A%20digital%20brain%20representing%20artificial%20intelligence%20is%20connected%20to%20a%20network%20o.webp))
 
 **Final Project: Capstone AI Application**
 The course culminates in a Capstone project, where students apply their knowledge to build an AI-powered application. This project will require:
