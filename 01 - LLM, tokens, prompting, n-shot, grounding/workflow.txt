@@ -20,12 +20,12 @@ AI: Here are a few image ideas based on the blog post:
 
 Me: Choose randomly, any one will do
 
-AI: ![Lecture-image-1](https://github.com/SaidamirRust/masters-ai/blob/main/01%20-%20LLM%2C%20tokens%2C%20prompting%2C%20n-shot%2C%20grounding/DALL%C2%B7E%202025-02-04%2012.37.02%20-%201.%20A%20modern%20classroom%20with%20a%20diverse%20group%20of%20students%20engaged%20in%20an%20interactive%20AI%20lecture.%20The%20instructor%20is%20presenting%20AI%20concepts%20on%20a%20large%20digit.webp)
+AI: (First image)
     Here's an image based on your request! Let me know if you'd like any modifications or additional ones from the list.
 
 Me: And generate another on, based on a different point
 
-AI: ![Lecture-image-2]([https://github.com/user-attachments/assets/e0ea38ff-be21-488e-9764-b940d7734953](https://github.com/SaidamirRust/masters-ai/blob/main/01%20-%20LLM%2C%20tokens%2C%20prompting%2C%20n-shot%2C%20grounding/DALL%C2%B7E%202025-02-04%2012.37.10%20-%20A%20futuristic%20illustration%20depicting%20AI%20and%20Machine%20Learning%20concepts.%20A%20digital%20brain%20representing%20artificial%20intelligence%20is%20connected%20to%20a%20network%20o.webp))
+AI: (Second image)
     Here's another image based on AI and Machine Learning concepts. Let me know if you need more or any adjustments!
 
 
