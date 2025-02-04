@@ -21,7 +21,7 @@ The generative AI course is part of a broader master's curriculum, designed to c
 
 The course emphasizes hands-on experience, leveraging Python for coding exercises. A GitHub repository has been set up for students to submit their practical tasks, ensuring structured learning and progress tracking.
 
-![openart-image_KqB1QjZx_1737560872572_raw](https://github.com/user-attachments/assets/bd6c9299-b29f-4822-9312-2a7332e47895)
+![Lecture-image-1](https://github.com/SaidamirRust/masters-ai/blob/main/01%20-%20LLM%2C%20tokens%2C%20prompting%2C%20n-shot%2C%20grounding/DALL%C2%B7E%202025-02-04%2012.37.02%20-%201.%20A%20modern%20classroom%20with%20a%20diverse%20group%20of%20students%20engaged%20in%20an%20interactive%20AI%20lecture.%20The%20instructor%20is%20presenting%20AI%20concepts%20on%20a%20large%20digit.webp)
 
 **Defining Artificial Intelligence and Machine Learning**
 One of the key discussions in the lecture revolved around defining AI and ML.
@@ -51,7 +51,7 @@ A thought-provoking discussion emerged around ethical AI, focusing on:
 - **Bias in AI:** Addressing algorithmic fairness to prevent discrimination.
 - **Corporate Responsibilities:** Best practices for ensuring AI aligns with human values.
 
- ![openart-image_yCRJDKoP_1737560872398_raw](https://github.com/user-attachments/assets/e0ea38ff-be21-488e-9764-b940d7734953)
+ ![Lecture-image-1]([https://github.com/user-attachments/assets/e0ea38ff-be21-488e-9764-b940d7734953](https://github.com/SaidamirRust/masters-ai/blob/main/01%20-%20LLM%2C%20tokens%2C%20prompting%2C%20n-shot%2C%20grounding/DALL%C2%B7E%202025-02-04%2012.37.10%20-%20A%20futuristic%20illustration%20depicting%20AI%20and%20Machine%20Learning%20concepts.%20A%20digital%20brain%20representing%20artificial%20intelligence%20is%20connected%20to%20a%20network%20o.webp))
 
 **Final Project: Capstone AI Application**
 The course culminates in a Capstone project, where students apply their knowledge to build an AI-powered application. This project will require:
