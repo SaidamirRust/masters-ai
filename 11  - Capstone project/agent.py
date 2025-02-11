@@ -1,6 +1,7 @@
+import json
 import openai
 import os
-import pandas as pd
+import sqlite3
 from utils import LOGGER
 
 # Load API Key
@@ -8,44 +9,35 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
     LOGGER.error("OpenAI API key is missing.")
 
-# Load Restaurant Reviews CSV
-DATA_PATH = "restaurant_reviews.csv"
-df = pd.read_csv(DATA_PATH)
-LOGGER.info("Loaded restaurant reviews dataset in agent.")
+# Database connection
+DB_PATH = "restaurant_reviews.db"
 
-def get_relevant_reviews(user_query, num_reviews=5):
-    """
-    Retrieves reviews relevant to the user's query.
-    If no relevant reviews are found, fallback to random samples.
-    """
-    query_keywords = user_query.lower().split()
-
-    filtered_df = df[
-        df.apply(lambda row: any(keyword in str(row["Review"]).lower() for keyword in query_keywords), axis=1)]
-
-    if not filtered_df.empty:
-        relevant_reviews = filtered_df.sample(min(num_reviews, len(filtered_df))).to_dict(orient="records")
-    else:
-        relevant_reviews = df.sample(num_reviews).to_dict(orient="records")
-
-    return relevant_reviews
+def execute_sql_query(query, params=()):
+    """Executes an SQL query on the SQLite database."""
+    try:
+        with sqlite3.connect(DB_PATH) as conn:
+            cursor = conn.cursor()
+            cursor.execute(query, params)
+            results = cursor.fetchall()
+            return results
+    except sqlite3.Error as e:
+        LOGGER.error(f"Database error: {e}")
+        return []
 
 
 def query_agent(user_query, conversation_history=""):
     """
-    Processes user query using GPT-4o with memory and relevant restaurant review data.
+    Processes user query using GPT-4o with memory, relevant restaurant review data, OpenAI's function calling for SQL-based data retrieval.
     """
     if not OPENAI_API_KEY:
         return "Error: OpenAI API key is missing."
 
-    # Extract relevant reviews based on query
-    relevant_reviews = get_relevant_reviews(user_query)
-    context = "\n".join(
-        [f"{r['Restaurant Name']} ({r['Country']}): {r['Sentiment']} - {r['Review']}" for r in relevant_reviews])
-
     system_message = (
-            "You are a restaurant insights assistant. "
-            "Use the following review data to answer user questions:\n\n" + context
+        "You are a knowledgeable restaurant review assistant. "
+        "Analyze SQL query results and generate insightful, structured responses. "
+        "Do not return raw database results—interpret them naturally. "
+        "Summarize overall sentiment, highlight key trends, and suggest relevant insights. "
+        "If the reviews mention recurring themes (e.g., great service, bad food), point them out."
     )
 
     # Build message history for memory
@@ -57,15 +49,60 @@ def query_agent(user_query, conversation_history=""):
     messages.append({"role": "user", "content": user_query})
 
     try:
-        LOGGER.info("Sending query to OpenAI API.")
+        LOGGER.info("Sending query to OpenAI API with function calling.")
         response = openai.chat.completions.create(
             model="gpt-4o",
             messages=messages,
-            max_tokens=200
+            functions=[
+                {
+                    "name": "execute_sql_query",
+                    "description": "Execute an SQL query on the restaurant review database.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "query": {"type": "string", "description": "The SQL query to execute."},
+                            "params": {"type": "array", "items": {"type": "string"}, "description": "Query parameters."}
+                        },
+                        "required": ["query"]
+                    }
+                }
+            ],
+            function_call="auto",
+            max_tokens=500
         )
+
         LOGGER.info("Received response from OpenAI API.")
-        return response.choices[0].message.content.strip()
+        response_message = response.choices[0].message
+
+        if hasattr(response_message, "function_call") and response_message.function_call:
+            func_name = response_message.function_call.name
+            func_args = json.loads(response_message.function_call.arguments)
+
+            if func_name == "execute_sql_query":
+                query = func_args.get("query")
+                params = func_args.get("params", [])
+                results = execute_sql_query(query, params)
+
+                # Pass results back to OpenAI for AI-generated response
+                ai_context = f"Here are the restaurant reviews: {results}. Based on this, summarize the insights."
+                messages.append({"role": "assistant", "content": ai_context})
+
+                ai_response = openai.chat.completions.create(
+                    model="gpt-4o",
+                    messages=messages,
+                    max_tokens=500
+                )
+
+                return ai_response.choices[0].message.content.strip()
+
+        return response_message.content.strip() if response_message.content else "No valid response."
 
     except openai.APIError as e:
         LOGGER.error(f"OpenAI API Error: {e}")
         return f"OpenAI API Error: {e}"
+    except json.JSONDecodeError as e:
+        LOGGER.error(f"Error decoding JSON from OpenAI response: {e}")
+        return "Error: Failed to parse OpenAI function call arguments."
+    except Exception as e:
+        LOGGER.error(f"Unexpected error: {e}")
+        return "An unexpected error occurred."

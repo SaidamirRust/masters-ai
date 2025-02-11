@@ -2,6 +2,7 @@ import streamlit as st
 from agent import query_agent
 from api_tools import get_restaurant_recommendations
 from utils import LOGGER
+import sqlite3
 import pandas as pd
 
 st.set_page_config(page_title="Restaurant Insights Agent", layout="wide")
@@ -59,8 +60,13 @@ for msg in st.session_state["messages"]:
 st.sidebar.subheader("📊 Business Insights")
 
 # Load the restaurant reviews dataset
-df = pd.read_csv("restaurant_reviews.csv")
-LOGGER.info("Loaded restaurant reviews dataset.")
+def load_reviews_from_db():
+    with sqlite3.connect("restaurant_reviews.db") as conn:
+        df = pd.read_sql("SELECT * FROM reviews", conn)
+    return df
+
+df = load_reviews_from_db()
+LOGGER.info("Loaded restaurant reviews dataset from SQLite.")
 
 # Convert sentiment to numeric values
 sentiment_mapping = {"Positive": 1, "Neutral": 0, "Negative": -1}
@@ -79,5 +85,5 @@ with col2:
     st.sidebar.metric(label="Avg Sentiment Score", value=round(avg_sentiment, 2))
 
 with col3:
-    top_restaurant = df.groupby("Restaurant Name")["Sentiment"].mean().idxmax()
+    top_restaurant = df.groupby("Restaurant_Name")["Sentiment"].mean().idxmax()
     st.sidebar.metric(label="🏆 Top Restaurant", value=top_restaurant)
