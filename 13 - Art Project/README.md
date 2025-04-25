@@ -8,31 +8,31 @@
 
 ### **1.1 "20,000 Leagues Under the Sea" (Jules Verne Book Cover)**  
 **Original**:  
-![Original Cover](jules_verne_original.jpg)  
+![Original Cover](20000%20Leagues%20Under%20the%20Sea/jules_verne_original.jpg)  
 *(Classic 19th-century illustration of the Nautilus submarine with tentacles)*  
 
 **AI Variation**:  
-![Nautilus](jules_verne_ai.png)  
+![Nautilus](20000%20Leagues%20Under%20the%20Sea/jules_verne_ai.png)  
 
 ---
 
 ### **1.2 "Necron Codex" by Jaime Martinez (Warhammer 40K Cover Art)**  
 **Original**:  
-![Original Necron Art](jaime-martinez-necrons-codex-original.jpg)  
+![Original Necron Art](Necron%20Codex%20Cover/jaime-martinez-necrons-codex-original.jpg)  
 *(Grimdark sci-fi artwork of a Necron army awakening)*  
 
 **AI Variation**:  
-![Cyberpunk Necron](jaime-martinez-necrons-codex-ai.png)  
+![Cyberpunk Necron](Necron%20Codex%20Cover/jaime-martinez-necrons-codex-ai.png)  
 
 ---
 
 ### **1.3 Pink Floyd – "Dark Side of the Moon" (Vinyl Album Cover)**  
 **Original**:  
-![Original Pink Floyd Cover](Dark_Side_of_the_Moon_Original.jpg)  
+![Original Pink Floyd Cover](Pink%20Floyd%20Album/Dark_Side_of_the_Moon_Original.jpg)  
 *(Prism refracting light into a rainbow on black background)*  
 
 **AI Variation**:  
-![Bioluminescent Prism](Dark_Side_of_the_Moon_AI.png)  
+![Bioluminescent Prism](Pink%20Floyd%20Album/Dark_Side_of_the_Moon_AI.png)  
 
 ---
 
@@ -55,13 +55,13 @@
 
 ### **ComfyUI Node Graphs**  
 1. **Jules Verne Book Cover**:  
-   ![Jules Verne Workflow]((jules_verne_prompt.png))  
+   ![Jules Verne Workflow]((20000%20Leagues%20Under%20the%20Sea/jules_verne_prompt.png))  
 
 2. **Necron Art Modification**:  
-   ![Necron Workflow](jaime-martinez-necrons-codex-prompt.png)  
+   ![Necron Workflow](Necron%20Codex%20Cover/jaime-martinez-necrons-codex-prompt.png)  
 
 3. **Vinyl Art Variation**:  
-   ![Pink Floyd Workflow](Dark_Side_of_the_Moon_Prompt.png)  
+   ![Pink Floyd Workflow](Pink%20Floyd%20Album/Dark_Side_of_the_Moon_Prompt.png)  
 
 ---
 
