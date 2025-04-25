@@ -53,14 +53,16 @@
 
 ## 3. Workflow Screenshots 
 
-### **ComfyUI Node Graphs**  
-1. **Jules Verne Book Cover**:  
+1. **Jules Verne Book Cover**:
+ 
    ![Jules Verne Workflow](20000%20Leagues%20Under%20the%20Sea/jules_verne_prompt.png)  
 
-2. **Necron Art Modification**:  
+2. **Necron Codex Cover Art**:
+
    ![Necron Workflow](Necron%20Codex%20Cover/jaime-martinez-necrons-codex-prompt.png)  
 
-3. **Vinyl Art Variation**:  
+3. **Vinyl Album Cover Art**:
+
    ![Pink Floyd Workflow](Pink%20Floyd%20Album/Dark_Side_of_the_Moon_Prompt.png)  
 
 ---
@@ -69,4 +71,4 @@
 - **Original Images**:  
   - [Jules Verne Cover Source](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2F20-000-Leagues-Under-Sea%2Fdp%2F0553212524&psig=AOvVaw0BWlmE6aB0pjPoMujTTB5o&ust=1745694948156000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCJDH587y84wDFQAAAAAdAAAAABAE)  
   - [Necron Codex Cover Source](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.warhammerart.com%2Fproducts%2Fcodex-necrons-cover-art-10th-edition&psig=AOvVaw3Hwxv8gyk5TVCFIybhiyJj&ust=1745695038893000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCJCBsPby84wDFQAAAAAdAAAAABAE)  
-  - [Pink Floyd Album Cover Source]([https://example.com/pink_floyd](https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FThe_Dark_Side_of_the_Moon&psig=AOvVaw0eaZ5yXzvKNXFFsx57yid9&ust=1745695095062000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCPDjhJLz84wDFQAAAAAdAAAAABAE))  
+  - [Pink Floyd Album Cover Source](https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FThe_Dark_Side_of_the_Moon&psig=AOvVaw0eaZ5yXzvKNXFFsx57yid9&ust=1745695095062000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCPDjhJLz84wDFQAAAAAdAAAAABAE)  
