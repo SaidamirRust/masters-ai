@@ -8,30 +8,36 @@
 
 ### **1.1 "20,000 Leagues Under the Sea" (Jules Verne Book Cover)**  
 **Original**:  
+
 ![Original Cover](20000%20Leagues%20Under%20the%20Sea/jules_verne_original.jpg)  
 *(Classic 19th-century illustration of the Nautilus submarine with tentacles)*  
 
 **AI Variation**:  
+
 ![Nautilus](20000%20Leagues%20Under%20the%20Sea/jules_verne_ai.png)  
 
 ---
 
 ### **1.2 "Necron Codex" by Jaime Martinez (Warhammer 40K Cover Art)**  
 **Original**:  
+
 ![Original Necron Art](Necron%20Codex%20Cover/jaime-martinez-necrons-codex-original.jpg)  
 *(Grimdark sci-fi artwork of a Necron army awakening)*  
 
 **AI Variation**:  
+
 ![Cyberpunk Necron](Necron%20Codex%20Cover/jaime-martinez-necrons-codex-ai.png)  
 
 ---
 
 ### **1.3 Pink Floyd – "Dark Side of the Moon" (Vinyl Album Cover)**  
 **Original**:  
+
 ![Original Pink Floyd Cover](Pink%20Floyd%20Album/Dark_Side_of_the_Moon_Original.png)  
 *(Prism refracting light into a rainbow on black background)*  
 
 **AI Variation**:  
+
 ![Bioluminescent Prism](Pink%20Floyd%20Album/Dark_Side_of_the_Moon_AI.png)  
 
 ---
