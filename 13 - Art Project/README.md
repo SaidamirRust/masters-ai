@@ -28,7 +28,7 @@
 
 ### **1.3 Pink Floyd – "Dark Side of the Moon" (Vinyl Album Cover)**  
 **Original**:  
-![Original Pink Floyd Cover](Pink%20Floyd%20Album/Dark_Side_of_the_Moon_Original.jpg)  
+![Original Pink Floyd Cover](Pink%20Floyd%20Album/Dark_Side_of_the_Moon_Original.png)  
 *(Prism refracting light into a rainbow on black background)*  
 
 **AI Variation**:  
@@ -55,7 +55,7 @@
 
 ### **ComfyUI Node Graphs**  
 1. **Jules Verne Book Cover**:  
-   ![Jules Verne Workflow]((20000%20Leagues%20Under%20the%20Sea/jules_verne_prompt.png))  
+   ![Jules Verne Workflow](20000%20Leagues%20Under%20the%20Sea/jules_verne_prompt.png)  
 
 2. **Necron Art Modification**:  
    ![Necron Workflow](Necron%20Codex%20Cover/jaime-martinez-necrons-codex-prompt.png)  
